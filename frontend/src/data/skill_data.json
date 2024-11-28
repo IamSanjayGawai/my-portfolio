@@ -1,0 +1,36 @@
+{
+    "skills": [
+      { "id": 1, "skill_name": "React" },
+      { "id": 2, "skill_name": "Next.js" },
+      { "id": 3, "skill_name": "Node.js" },
+      { "id": 4, "skill_name": "Langchain" },
+      { "id": 5, "skill_name": "React Native" },
+      { "id": 6, "skill_name": "JavaScript" },
+      { "id": 7, "skill_name": "TypeScript" },
+      { "id": 8, "skill_name": "Python" },
+      { "id": 9, "skill_name": "Gen AI" },
+      { "id": 10, "skill_name": "HTML5" },
+      { "id": 11, "skill_name": "Figma" },
+      { "id": 12, "skill_name": "CSS3" },
+      { "id": 13, "skill_name": "Bootstrap" },
+      { "id": 14, "skill_name": "Tailwind CSS" },
+      { "id": 15, "skill_name": "Git/GitHub" },
+      { "id": 16, "skill_name": "Trello" },
+      { "id": 17, "skill_name": "Slack" },
+      { "id": 18, "skill_name": "MS-Teams" },
+      { "id": 19, "skill_name": "Vercel" },
+      { "id": 20, "skill_name": "Render" },
+      { "id": 21, "skill_name": "Netlify" },
+      { "id": 22, "skill_name": "Basics AWS" },
+      { "id": 23, "skill_name": "MongoDB" },
+      { "id": 24, "skill_name": "Basic SQL" },
+      { "id": 25, "skill_name": "Prisma" },
+      { "id": 26, "skill_name": "PostgreSQL" },
+      { "id": 27, "skill_name": "Communication" },
+      { "id": 28, "skill_name": "Fast Learner" },
+      { "id": 29, "skill_name": "Team Work" },
+      { "id": 30, "skill_name": "Problem Solving" },
+      { "id": 31, "skill_name": "Self Motivated" }
+    ]
+  }
+  
