@@ -11,7 +11,7 @@ dotenv.config(); // Load environment variables from .env file
 
 // Configure CORS options
 const corsOptions = {
-  origin: ['http://localhost:5173', 'http://another-origin.com'], // Array of allowed origins
+  origin: ['http://localhost:5173', 'https://my-portfolio-4yfk.vercel.app/'], // Array of allowed origins
   methods: ['GET', 'POST'],
   credentials: true, // Allow credentials such as cookies
 };
