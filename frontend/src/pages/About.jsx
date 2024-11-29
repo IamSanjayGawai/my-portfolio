@@ -4,7 +4,7 @@ const About = () => {
         <section className="bg-white dark:bg-gray-900">
           <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
             {/* About Text */}
-            <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+            <div className="font-light sm:text-lg dark:text-white">
               <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                 About Me
               </h2>
@@ -15,7 +15,7 @@ const About = () => {
                 on delivering high-quality, user-centric solutions.
               </p>
               <p className="mb-6">
-                I hold a B.Tech in Electronics and Telecommunication from CSMSS
+                I hold a <span className="font-bold">B.Tech in Electronics and Telecommunication</span> from CSMSS
                 Chh. Shahu College of Engineering, and continuously strive to
                 enhance my skills through hands-on projects.
               </p>

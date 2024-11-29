@@ -17,13 +17,13 @@ const Certificates = () => {
   const visibleCertificates = showAll ? certificates : certificates.slice(0, 4);
 
   return (
-    <section className="bg-gray-100 dark:bg-gray-900">
+    <section className="bg-gray-100 ">
       <div className="py-12 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="mx-auto max-w-screen-sm text-center mb-10 lg:mb-16">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">
             My Certificates
           </h2>
-          <p className="font-medium text-gray-700 dark:text-gray-300 sm:text-lg">
+          <p className="font-medium text-gray-700  sm:text-lg">
             A showcase of my professional Certificates that validate my skills
             and knowledge across various domains and technologies.
           </p>
@@ -32,7 +32,7 @@ const Certificates = () => {
           {visibleCertificates.map((cert, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border dark:border-gray-700 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-lg shadow-lg border dark:border-gray-700 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="p-5 flex flex-col items-center">
                 <img
@@ -40,13 +40,13 @@ const Certificates = () => {
                   alt={cert.name}
                   className="w-16 h-16 mb-4 rounded-full border"
                 />
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white text-center">
+                <h3 className="text-lg font-semibold text-gray-900  text-center">
                   {cert.name}
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400 text-center mt-2">
                   {cert.issuer}
                 </p>
-                <p className="mt-3 mb-4 text-sm text-gray-700 dark:text-gray-300 text-center">
+                <p className="mt-3 mb-4 text-sm text-gray-700 text-center line-clamp-4">
                   {cert.description}
                 </p>
                 <a
