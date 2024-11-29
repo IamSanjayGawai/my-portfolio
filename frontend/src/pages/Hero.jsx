@@ -27,7 +27,11 @@ const MainSection = () => {
 
           {/* Button Section */}
           <div className="flex justify-start space-x-4 w-full">
+            <a 
+               href="../assets/Sanjay_Gawai_Resume.pdf"
+               download>
             <button
+         
               type="button"
               className="text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center dark:focus:ring-yellow-800"
             >
@@ -48,6 +52,7 @@ const MainSection = () => {
                 />
               </svg>
             </button>
+            </a>
             <a href="#contact">
             <button
               type="button"
