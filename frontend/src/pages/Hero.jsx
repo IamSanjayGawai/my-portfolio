@@ -28,8 +28,10 @@ const MainSection = () => {
           {/* Button Section */}
           <div className="flex justify-start space-x-4 w-full">
             <a 
-               href="../assets/Sanjay_Gawai_Resume.pdf"
-               download>
+                    href="/SanjayGawai_Resume.pdf"
+                    download="SanjayGawai_Resume.pdf"
+                    type="application/pdf"
+               >
             <button
          
               type="button"
