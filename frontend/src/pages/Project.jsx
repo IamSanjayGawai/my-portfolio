@@ -106,7 +106,7 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-black flex justify-center items-center"
+                      className="hover:text-black flex justify-center items-center cursor-pointer"
                     >
                       <svg
                         className="w-5 h-5"
