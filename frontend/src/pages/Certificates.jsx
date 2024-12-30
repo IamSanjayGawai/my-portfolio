@@ -50,6 +50,7 @@ const Certificates = () => {
             and knowledge across various domains and technologies.
           </p>
         </div>
+        
         <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2 lg:grid-cols-3">
           {
               loading

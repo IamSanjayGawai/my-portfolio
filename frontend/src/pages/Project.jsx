@@ -52,6 +52,11 @@ const Projects = () => {
               across diverse domains, are outlined below.
             </p>
           </div>
+          {loading ? (
+  <h1 className='font-bold'>
+    Data is loading from the database. It might take some time as we are using the free version of MongoDB.
+  </h1>
+) : ""}
           <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {
             
