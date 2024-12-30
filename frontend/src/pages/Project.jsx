@@ -6,15 +6,37 @@ import { getAllProjectsThunk } from '../redux/thunks/projectThunk';
 const Projects = () => {
   const projects = useAppSelector(selectProjects);
   const dispatch = useAppDispatch();
-
+  const [loading, setLoading] = useState(true); // Add loading state
   const [showAll, setShowAll] = useState(false);
 
   const visibleProjects = showAll ? projects : projects.slice(0, 4);
 
   useEffect(() => {
-    console.log('Dispatching getAllProjectsThunk...');
-    dispatch(getAllProjectsThunk());
+    const fetchProjects = async () => {
+      setLoading(true);
+      await dispatch(getAllProjectsThunk());
+      setLoading(false); // Set loading to false once data is fetched
+    };
+    fetchProjects();
   }, [dispatch]);
+
+  
+  // Skeleton Loader Component
+  const SkeletonCard = () => (
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden animate-pulse">
+      <div className="w-full lg:h-60 sm:h-80 md:h-80 bg-gray-300"></div>
+      <div className="p-5">
+        <div className="h-4 bg-gray-300 rounded mb-2 w-3/4"></div>
+        <div className="h-4 bg-gray-300 rounded mb-4 w-1/2"></div>
+        <div className="flex space-x-2 mb-4">
+          <div className="h-6 w-12 bg-gray-300 rounded"></div>
+          <div className="h-6 w-16 bg-gray-300 rounded"></div>
+        </div>
+        <div className="h-3 bg-gray-300 rounded w-full"></div>
+      </div>
+    </div>
+  );
+
 
   return (
     <>
@@ -31,7 +53,16 @@ const Projects = () => {
             </p>
           </div>
           <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {visibleProjects.map((project, index) => (
+            {
+            
+            loading
+              ? Array(4) // Show 4 skeletons as placeholders
+                  .fill(null)
+                  .map((_, idx) => <SkeletonCard key={idx} />)
+              :
+            
+            
+            visibleProjects.map((project, index) => (
               <div
                 key={index}
                 className="bg-white rounded-lg shadow-lg overflow-hidden"

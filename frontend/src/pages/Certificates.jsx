@@ -5,16 +5,38 @@ import { selectCertificates } from "../redux/slices/slices";
 
 const Certificates = () => {
   const certificates = useAppSelector(selectCertificates);
+  const [loading, setLoading] = useState(true); // Add loading state
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(getCertificateThunk());
-    console.log(certificates);
-    console.log('Dispatching getCertificateThunk...');
+        const fetchProjects = async () => {
+          setLoading(true);
+          console.log(certificates);
+          console.log('Dispatching getCertificateThunk...');
+          await  dispatch(getCertificateThunk());
+          setLoading(false); // Set loading to false once data is fetched
+        };
+        fetchProjects();
   }, [dispatch]);
 
   const [showAll, setShowAll] = useState(false);
   const visibleCertificates = showAll ? certificates : certificates.slice(0, 4);
+
+  const SkeletonCard = () => (
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden animate-pulse lg:h-[300px] sm:h-[200px] md:h-[300px]  p-6">
+      <div className="w-full  flex  justify-center items-center">
+      <div className=" bg-gray-300 w-16 h-16 mb-4 rounded-full border "></div>
+      </div>
+      <div className="p-5 flex justify-center items-center flex-col">
+      <div className="h-2 bg-gray-300 rounded mb-4 w-1/3"></div>
+        <div className="h-4 bg-gray-300 rounded mb-4 w-full"></div>
+        <div className="h-4 bg-gray-300 rounded mb-4 w-full"></div>
+        <div className="h-4 bg-gray-300 rounded mb-4 w-full"></div>
+    
+        <div className="h-8 w-40 bg-gray-300 rounded"></div>
+      </div>
+    </div>
+  );
 
   return (
     <section className="bg-gray-100 ">
@@ -29,7 +51,12 @@ const Certificates = () => {
           </p>
         </div>
         <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2 lg:grid-cols-3">
-          {visibleCertificates.map((cert, index) => (
+          {
+              loading
+                ? Array(6) // Render 4 skeletons as placeholders during loading
+                    .fill(null)
+                    .map((_, idx) => <SkeletonCard key={idx} />)
+                : visibleCertificates.map((cert, index) => (
             <div
               key={index}
               className="bg-white rounded-lg shadow-lg border dark:border-gray-700 hover:shadow-xl transition-shadow duration-300"
