@@ -12,31 +12,32 @@ const Navbar= () => {
     };
 
     return (
-        <nav className="bg-white border-gray-200 py-2.5 sticky top-0">
+        <div className='w-full flex justify-center mt-5'>
+        <nav className="bg-black border-white py-4 sticky top-0  w-[90%] rounded-3xl">
             <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 <a href="#" className="flex items-center">
                     <img
                         src={profile_img}
-                        className="h-6 mr-3 sm:h-9"
+                        className="h-8 mr-3 sm:h-10"
                         alt="Landwind Logo"
                     />
-                    <span className="self-center text-xl font-semibold whitespace-nowrap ">
-                        Sanjay Gawai
+                    <span className="self-center whitespace-nowrap text-white text-3xl ">
+                        SANJAY<span className='font-bold'>GAWAI</span>
                     </span>
                 </a>
                 <div className="flex items-center lg:order-2">
-                    <a
+                    {/* <a
                         href="/SanjayGawai_Resume.pdf"
                         download="SanjayGawai_Resume.pdf"
                         type="application/pdf"
                         className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
                         Download Resume
-                    </a>
+                    </a> */}
                     <button
                         onClick={toggleMenu}
                         type="button"
-                        className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        className="inline-flex items-center p-2 ml-1 text-sm  text-white  rounded-lg lg:hidden"
                         aria-controls="mobile-menu-2"
                         aria-expanded={isMenuOpen ? "true" : "false"}
                     >
@@ -68,14 +69,14 @@ const Navbar= () => {
                     </button>
                 </div>
                 <div
-                    className={`items-center justify-between w-full lg:flex lg:w-auto lg:order-1 ${isMenuOpen ? 'block' : 'hidden'}`}
+                    className={`items-center justify-between w-full lg:flex lg:w-auto lg:order-1 ${isMenuOpen ? 'block ' : 'hidden'}`}
                     id="mobile-menu-2"
                 >
-                    <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                    <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 text-xl">
                         <li>
                             <a
                                 href="#"
-                                className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+                                className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
                                 aria-current="page"
                             >
                                 Home
@@ -84,7 +85,7 @@ const Navbar= () => {
                         <li>
                             <a
                                 href="#work-with"
-                                className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+                                className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
                             >
                                 Work with
                             </a>
@@ -92,7 +93,7 @@ const Navbar= () => {
                         <li>
                             <a
                                 href="#services"
-                                className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+                                className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
                             >
                                 Services
                             </a>
@@ -100,7 +101,7 @@ const Navbar= () => {
                         <li>
                             <a
                                 href="#projects"
-                                className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+                                className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
                             >
                                 Projects
                             </a>
@@ -108,7 +109,7 @@ const Navbar= () => {
                         <li>
                             <a
                                 href="#certificates"
-                                className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+                                className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
                             >
                                 Certificates
                             </a>
@@ -116,7 +117,7 @@ const Navbar= () => {
                         <li>
                             <a
                                 href="#blog"
-                                className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+                                className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
                             >
                                 Blog
                             </a>
@@ -124,7 +125,7 @@ const Navbar= () => {
                         <li>
                             <a
                                 href="#roadmap"
-                                className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+                                className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
                             >
                                 Roadmap
                             </a>
@@ -132,7 +133,7 @@ const Navbar= () => {
                         <li>
                             <a
                                 href="#contact"
-                                className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+                                className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
                             >
                                 Contact
                             </a>
@@ -141,6 +142,7 @@ const Navbar= () => {
                 </div>
             </div>
         </nav>
+        </div>
     );
 };
 
@@ -165,7 +167,7 @@ export default Navbar;
 //     };
 
 //     return (
-//         <nav className="bg-white border-gray-200 py-2.5 sticky top-0">
+//         <nav className="bg-white border-white py-2.5 sticky top-0">
 //             <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
 //                 <a href="#" className="flex items-center">
 //                     <img
@@ -187,7 +189,7 @@ export default Navbar;
 //                     <button
 //                         onClick={toggleMenu}
 //                         type="button"
-//                         className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+//                         className="inline-flex items-center p-2 ml-1 text-sm text-white rounded-lg lg:hidden hover:bg-white focus:outline-none focus:ring-2 focus:ring-white dark:text-white dark:hover:bg-white dark:focus:ring-white"
 //                         aria-controls="mobile-menu-2"
 //                         aria-expanded={isMenuOpen ? "true" : "false"}
 //                     >
@@ -226,7 +228,7 @@ export default Navbar;
 //                         <li>
 //                             <button
 //                                 onClick={() => handleNavigation('/')}
-//                                 className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+//                                 className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
 //                             >
 //                                 Home
 //                             </button>
@@ -234,7 +236,7 @@ export default Navbar;
 //                         <li>
 //                             <button
 //                                 onClick={() => handleNavigation('/work-with')}
-//                                 className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+//                                 className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
 //                             >
 //                                 Work with
 //                             </button>
@@ -242,7 +244,7 @@ export default Navbar;
 //                         <li>
 //                             <button
 //                                 onClick={() => handleNavigation('/services')}
-//                                 className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+//                                 className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
 //                             >
 //                                 Services
 //                             </button>
@@ -250,7 +252,7 @@ export default Navbar;
 //                         <li>
 //                             <button
 //                                 onClick={() => handleNavigation('/projects')}
-//                                 className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+//                                 className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
 //                             >
 //                                 Projects
 //                             </button>
@@ -258,7 +260,7 @@ export default Navbar;
 //                         <li>
 //                             <button
 //                                 onClick={() => handleNavigation('/certificates')}
-//                                 className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+//                                 className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
 //                             >
 //                                 Certificates
 //                             </button>
@@ -266,7 +268,7 @@ export default Navbar;
 //                         <li>
 //                             <button
 //                                 onClick={() => handleNavigation('/blog')}
-//                                 className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+//                                 className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
 //                             >
 //                                 Blog
 //                             </button>
@@ -274,7 +276,7 @@ export default Navbar;
 //                         <li>
 //                             <button
 //                                 onClick={() => handleNavigation('/roadmap')}
-//                                 className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+//                                 className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
 //                             >
 //                                 Roadmap
 //                             </button>
@@ -282,7 +284,7 @@ export default Navbar;
 //                         <li>
 //                             <button
 //                                 onClick={() => handleNavigation('/contact')}
-//                                 className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 lg:p-0 dark:text-gray-400 dark:hover:text-blue-500"
+//                                 className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
 //                             >
 //                                 Contact
 //                             </button>

@@ -11,21 +11,21 @@ const WorkWith = () => {
       <div>
         <section className="bg-white  ">
           <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
-            <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center md:text-4xl">
-              I have worked with
+            <h2 className="lg:text-5xl font-extrabold text-gray-900 text-4xl mb-8 text-center">
+              I have <span className="text-green-400">worked with</span>
             </h2>
             <div className="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-5 dark:text-gray-400 ">
-              <a href="#" className="flex justify-center items-center ">
+              <a href="#" className="flex justify-center items-center h-30 w-[200px]">
                 <img src={career_survival} />
               </a>
-              <a href="#" className="flex justify-center items-center">
+              <a href="#" className="flex justify-center items-center h-15 w-[150px]">
                 <img src={vibencode} />
               </a>
-              <a href="#" className="flex justify-center items-center">
+              <a href="#" className="flex justify-center items-center h-15 w-[200px]">
                 <img src={codeinbound} />
               </a>
 
-              <a href="#" className="flex justify-center items-center">
+              <a href="#" className="flex justify-center items-center h-15 w-[150px]">
                 <svg
                   width="148"
                   height="26"
@@ -129,7 +129,7 @@ const WorkWith = () => {
                 </svg>
               </a>
 
-              <a href="#" className="flex justify-center items-center">
+              <a href="#" className="flex justify-center items-center h-15 w-[150px]">
                 <img src={phn} />
               </a>
             </div>

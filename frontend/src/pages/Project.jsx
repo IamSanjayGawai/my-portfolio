@@ -2,12 +2,21 @@ import { useEffect, useState } from 'react';
 import { useAppSelector, useAppDispatch } from "../redux/hooks";
 import { selectProjects } from '../redux/slices/slices';
 import { getAllProjectsThunk } from '../redux/thunks/projectThunk';
+import MyRole from '../components/MyRole';
 
 const Projects = () => {
   const projects = useAppSelector(selectProjects);
   const dispatch = useAppDispatch();
   const [loading, setLoading] = useState(true); // Add loading state
   const [showAll, setShowAll] = useState(false);
+  const [clikedOnMyRole, setClikedOnMyRole] = useState(false)
+  const [selectedProject, setSelectedProject] = useState(null); // State to store selected project
+
+  const handleModalOpen = (project) => {
+    setClikedOnMyRole(true);
+    setSelectedProject(project); // Store the full project
+  };
+  
 
   const visibleProjects = showAll ? projects : projects.slice(0, 4);
 
@@ -15,6 +24,7 @@ const Projects = () => {
     const fetchProjects = async () => {
       setLoading(true);
       await dispatch(getAllProjectsThunk());
+      console.log(visibleProjects)
       setLoading(false); // Set loading to false once data is fetched
     };
     fetchProjects();
@@ -43,7 +53,7 @@ const Projects = () => {
       <section className="bg-white">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-black">
+            <h2 className="mb-4 lg:text-5xl font-extrabold text-gray-900 text-4xl">
               My Projects
             </h2>
             <p className="font-light text-black lg:mb-16 sm:text-xl">
@@ -57,7 +67,7 @@ const Projects = () => {
     Data is loading from the database. It might take some time as we are using the free version of MongoDB.
   </h1>
 ) : ""}
-          <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1">
             {
             
             loading
@@ -70,24 +80,52 @@ const Projects = () => {
             visibleProjects.map((project, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden"
+                className=" rounded-[50px] shadow-lg overflow-hidden flex w-full bg-[#102762] xs:flex-col lg:flex-row"
               >
-                <a href={project.live} target="_blank" rel="noopener noreferrer">
+                <div className='w-full lg:w-2/4 border flex justify-center items-center p-6'>
+                <a href={project.live} target="_blank" rel="noopener noreferrer ">
                   <img
-                    className="w-full lg:h-60 sm:h-80 md:h-80 object-cover rounded-t-lg border-2 p-2"
+                    className="w-full h-[450px] object-cover  rounded-t-lg border-2 p-2"
                     src={project.image}
                     alt={project.name}
                   />
                 </a>
-                <div className="p-5">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{project.name}</h3>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {Array.isArray(project.stack) &&
+                </div>
+       
+                <div className="p-5 w-full lg:w-2/4 border ">
+                <div className="flex justify-between items-center">
+  <h3 className="text-3xl lg:text-4xl font-bold mb-2 text-white">{project.name}</h3>
+  <div className="relative group">
+    <div
+      onClick={() => handleModalOpen(project.description)} 
+    className="rounded-full border bg-white w-10 h-10 flex justify-center items-center  cursor-pointer select-none">
+      <span 
+        onClick={() => handleModalOpen(project.description)} className="font-bold text-2xl lg:text-3xl">i</span>
+    </div>
+    {/* Tooltip */}
+    <div 
+    className="absolute w-20 text-center top-12 left-1/2 transform -translate-x-1/2 bg-green-400 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+      My Role {/* Replace 'project.role' with the actual role text */}
+    </div>
+  </div>
+</div>
+
+                 
+                  <div className='text-white flex flex-col gap-2'><span className='text-white text-lg lg:text-xl font-bold mt-2'>Worked on</span>
+                  <div className="flex gap-2">
+                  <div className='rounded-full border p-3'>Entire frontend UI </div>
+                  <div className='rounded-full border p-3'>Admin Panel</div>
+                  </div>
+             
+                  </div>
+                  <div className='text-white text-lg lg:text-xl font-bold mt-6'>Technology Used</div>
+                  <div className="flex flex-wrap gap-2 mb-4 mt-2">
+                    {/* {Array.isArray(project.stack) &&
                       project.stack.map((item, idx) =>
                         item.split(",").map((subItem, subIdx) => (
                           <span
                             key={`${idx}-${subIdx}`}
-                            className={`text-xs font-medium px-2 py-1 rounded-full ${
+                            className={` px-2 py-1 rounded-full font-bold text-2xl ${
                               subIdx % 3 === 0
                                 ? "bg-purple-500 text-white"
                                 : subIdx % 3 === 1
@@ -98,18 +136,30 @@ const Projects = () => {
                             {subItem.trim()}
                           </span>
                         ))
+                      )} */}
+                         {Array.isArray(project.stack) &&
+                      project.stack.map((item, idx) =>
+                        item.split(",").map((subItem, subIdx) => (
+                          <span
+                            key={`${idx}-${subIdx}`}
+                            className={` px-3 py-1 rounded-full font-bold text-2xl border bg-white`}
+                          >
+                            {subItem.trim()}
+                          </span>
+                        ))
                       )}
                   </div>
-                  <p className="text-gray-700 text-sm mb-4 line-clamp-3">{project.description}</p>
-                  <div className="flex space-x-4 text-gray-500 justify-around">
+                  {/* <p className="text-gray-700 text-sm mb-4 line-clamp-3 ">{project.description}</p> */}
+                  <div className="flex space-x-4 text-white justify-around">
                     <a
-                      href={project.live}
+                      href={project.github_link
+                      }
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-black flex justify-center items-center cursor-pointer"
+                      className="hover:text-black flex justify-center items-center cursor-pointer border px-4 py-2 rounded-full text-2xl lg:text-3xl gap-2  w-2/4"
                     >
                       <svg
-                        className="w-5 h-5"
+                        className="w-10 h-10"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                         aria-hidden="true"
@@ -123,11 +173,11 @@ const Projects = () => {
                       GitHub
                     </a>
                     <a
-                      href="#"
-                      className="text-gray-500 hover:text-gray-900 flex justify-center items-center"
+                      href={project.live_link}
+                      className=" hover:text-gray-900 flex justify-center items-center border px-4 py-2 rounded-full text-2xl lg:text-3xl gap-2 w-2/4"
                     >
                       <svg
-                        className="w-5 h-5"
+                        className="w-10 h-10"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                         aria-hidden="true"
@@ -156,6 +206,10 @@ const Projects = () => {
           </div>
         </div>
       </section>
+      {clikedOnMyRole && selectedProject && (
+  <MyRole setClikedOnMyRole={setClikedOnMyRole} projectDetail={selectedProject} />
+)}
+
     </>
   );
 };

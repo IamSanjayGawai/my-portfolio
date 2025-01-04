@@ -5,7 +5,7 @@ const About = () => {
           <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
             {/* About Text */}
             <div className="font-light sm:text-lg dark:text-white">
-              <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+              <h2 className="mb-4 lg:text-5xl font-extrabold text-gray-900 text-4xl text-center">
                 About Me
               </h2>
               <p className="mb-6">
@@ -56,17 +56,19 @@ const About = () => {
             </div>
   
             {/* Images */}
-            <div className="grid grid-cols-2 gap-4 mt-8">
-              <img
+            <div className="grid grid-cols-2 gap-6 mt-8">
+              {/* <img
                 className="w-full rounded-lg"
                 src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
                 alt="Office content 1"
-              />
-              <img
+              /> */}
+<div className="flex border bg-gray-200 grey-100 flex-col justify-center items-center py-10  rounded-[40px] shadow-2xl"> <span className="text-4xl lg:text-8xl font-bold mb-2 text-green-400">1.6+</span> <span className="xs:text-lg lg:text-2xl font-bold">Years</span> <span className="xs:text-lg lg:text-2xl font-bold">of Experience </span> </div>
+<div className="flex border bg-gray-200 grey-100 flex-col justify-center items-center py-10  rounded-[40px] shadow-2xl"> <span className="text-4xl lg:text-8xl font-bold mb-2 text-green-400">10+</span> <span className="xs:text-lg lg:xs:text-lg lg:text-2xl font-bold">Projects</span> <span className="xs:text-lg lg:text-2xl font-bold">Completed </span> </div>
+              {/* <img
                 className="mt-4 w-full lg:mt-10 rounded-lg"
                 src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
                 alt="Office content 2"
-              />
+              /> */}
             </div>
           </div>
         </section>

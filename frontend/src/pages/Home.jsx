@@ -15,14 +15,15 @@ const Home = () => {
       <div id="hero">
         <MainSection />
       </div>
-      <div id="services">
-        <Services />
+      <div id="about">
+        <About />
       </div>
       <div id="work-with">
         <WorkWith />
       </div>
-      <div id="about">
-        <About />
+
+      <div id="services">
+        <Services />
       </div>
       <div id="projects">
         <Projects />
@@ -30,9 +31,9 @@ const Home = () => {
       <div id="certificates">
         <Certificates />
       </div>
-      <div id="skills">
+      {/* <div id="skills">
         <Skills />
-      </div>
+      </div> */}
       <div id="blog">
         <Blog />
       </div>

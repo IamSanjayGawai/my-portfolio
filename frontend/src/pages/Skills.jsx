@@ -6,7 +6,7 @@ const Skills = () => {
       <section className="bg-gray-50 py-8 antialiased md:py-16">
         <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
           <div className="mb-4 flex items-center justify-between gap-4 md:mb-8">
-            <h2 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-2xl text-center w-full">
+            <h2 className="lg:text-5xl font-extrabold text-gray-900 text-4xl text-center w-full">
               My Skills
             </h2>
             {/* Uncomment this if you want to add a "See more categories" link */}

@@ -1,89 +1,163 @@
 import Profile_img from "../assets/images/profile-img.png";
+import react from "../assets//skills/react.png";
+import bootstrap from "../assets//skills/bootstrap.png";
+import python from "../assets//skills/python.png";
+import node from "../assets//skills/node.png";
+import tailwind from "../assets//skills/tailwind.png";
+import material from "../assets//skills/material.png";
+import figma from "../assets//skills/figma.png";
+import next from "../assets//skills/next.png";
+import mongodb from "../assets//skills/mongodb.png";
+import express from "../assets//skills/express.png";
+import typescript from "../assets//skills/typescript.png";
 
 const MainSection = () => {
-
-
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-gradient-to-r ">
-      <div className="container w-full h-screen flex flex-col sm:flex-col md:flex-col lg:flex-row items-center justify-between">
+    <div className="w-full flex items-center justify-center mt-10 relative">
+      {/* Background Section */}
+      <div className="absolute inset-0 bg-[url('./assets/background.png')] bg-center bg-cover bg-no-repeat opacity-20 z-0"></div>
+
+      {/* Main Content */}
+      <div className="container w-full flex flex-col sm:flex-col md:flex-col lg:flex-col items-center justify-between relative z-10">
         {/* Left section - Content */}
-        <div className="flex flex-col justify-center w-full md:w-3/4 lg:w-1/2 h-full p-4  order-1 sm:order-2 lg:order-1">
-          <h1 className="font-extrabold text-4xl lg:text-5xl mb-4 text-left w-full">
-            Hello, I am <span className="text-yellow-300">Sanjay</span>
+        <div className="flex flex-col justify-center w-full h-full p-4">
+          <h1 className="font-extrabold text-4xl lg:text-5xl mb-4 w-full text-center">
+            <div className="w-full flex justify-center items-center">
+              <div className="w-2/4 border-t-4 border-black mb-4"></div>
+            </div>
+            👋 Hello, I am <span className="text-green-400">Sanjay Gawai</span>
+            <div className="w-full flex justify-center items-center">
+              <div className="w-2/4 border-t-4 border-black mt-5"></div>
+            </div>
           </h1>
-          <p className="text-lg lg:text-xl mb-4 text-left w-full">
-            Building Scalable, Innovative, and User-Centric Web Solutions
+          <p className="text-3xl lg:text-6xl font-bold text-black text-center break">
+            <span>Expert </span>
+            <span className="text-green-400 ">Web Design </span>
+            <span className="text-green-400 ">Front-End Development,</span>
+            <span> Including </span>
+            <span className="text-green-400 ">SaaS Solutions </span>
           </p>
-          <p className="lg:text-lg sm:text-sm text-left mb-6">
-            As a{" "}
-            <span className="text-xl font-bold text-green-300">
-              Full-Stack Developer
+
+          <p className="text-lg lg:text-3xl mb-4 w-full text-center break mt-10">
+            I'm an{" "}
+            <span className="text-lg lg:text-3xl font-bold text-black">
+              Expert Frontend Developer
+            </span>{" "}
+            with
+            <span className="px-4 border-2 rounded-full text-center ml-2 bg-gray-100">
+              <span className="text-lg lg:text-3xl font-bold text-black">
+                1.7+ Years
+              </span>
+            </span>{" "}
+            of expertise in{" "}
+            <span className="text-lg lg:text-3xl font-bold text-black">
+              ReactJS
             </span>
-            , I craft seamless digital experiences with cutting-edge
-            technologies. From front-end design to backend architecture, I bring
-            your ideas to life with robust, scalable, and performance-driven web
-            applications.
+            . I create responsive, user-centric web solutions, specializing in{" "}
+            <span className="text-lg lg:text-3xl font-bold text-black">
+              SaaS
+            </span>{" "}
+            and{" "}
+            <span className="text-lg lg:text-3xl font-bold text-black ">
+              eCommerce
+            </span>{" "}
+            development.
           </p>
 
           {/* Button Section */}
-          <div className="flex justify-start space-x-4 w-full">
-            <a 
-                    href="/SanjayGawai_Resume.pdf"
-                    download="SanjayGawai_Resume.pdf"
-                    type="application/pdf"
-               >
-            <button
-         
-              type="button"
-              className="text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center dark:focus:ring-yellow-800"
+          <div className="flex justify-center items-center space-x-4 w-full mt-5">
+            <a
+              href="/SanjayGawai_Resume.pdf"
+              download="SanjayGawai_Resume.pdf"
+              type="application/pdf"
             >
-              Download Resume
-              <svg
-                className="rtl:rotate-180 w-4 h-4 ms-2"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
+              <button
+                type="button"
+                className="text-black border-2 hover:border-white xs:text-sm lg:text-2xl   border-black bg-white hover:text-white hover:bg-green-600 focus:ring-4 focus:outline focus:ring-green-300 font-medium rounded-full  px-4 py-2 inline-flex items-center dark:focus:ring-green-800"
               >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </button>
+                Download CV
+           
+              </button>
             </a>
             <a href="#contact">
-            <button
-              type="button"
-              className="px-5 py-2.5 text-base font-medium text-center inline-flex items-center text-white bg-green-500 rounded-lg hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300"
-           
-            >
-              <svg
-                className="w-4 h-4 text-white me-2"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 16"
+              <button
+                type="button"
+                className="px-5 py-2.5  xs:text-sm text-2xl font-medium text-center inline-flex items-center text-white bg-green-500 rounded-full hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300"
               >
-                <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
-                <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
-              </svg>
-              Contact Us
-            </button>
+                Hire Me
+              </button>
             </a>
           </div>
         </div>
 
         {/* Right section - Image */}
-        <div className="flex justify-center items-center sm:w-full md:w-1/4 lg:w-1/2 p-6 sm:order-1 lg:order-2">
+        <div className="flex justify-center items-center sm:w-full md:w-1/4 lg:w-3/4 p-6 sm:order-1 lg:order-2 gap-1 ">
+          <div className="flex flex-col gap-2  ">
+           
+            <div className="flex  items-center gap-2 rounded-full px-2 py-2 border-2 bg-black text-white font-bold text-[10px] lg:text-lg">
+              {" "}
+              <img src={react} className="lg:h-10 lg:w-10 w-4 h-4"></img> React.js{" "}
+            </div>
+        
+            <div className="flex  items-center gap-2 rounded-full px-2 py-2 border-2 bg-black text-white font-bold text-[10px] lg:text-lg">
+              {" "}
+              <img
+                src={next}
+                className="lg:h-10 lg:w-10 w-4 h-4 bg-white rounded-full"
+              ></img>{" "}
+              Next.js
+            </div>
+            <div className="flex  items-center gap-2 rounded-full px-2 py-2 border-2 bg-black text-white font-bold text-[10px] lg:text-lg">
+              {" "}
+              <img src={react} className="lg:h-10 lg:w-10 w-4 h-4"></img>  Native
+            </div>
+            <div className="flex  items-center gap-2 rounded-full px-2 py-2 border-2 bg-black text-white font-bold text-[10px] lg:text-lg">
+             {" "}
+              <img src={tailwind} className="lg:h-10 lg:w-10 w-4 h-4"></img>Tailwind
+            </div>
+            <div className="flex  items-center gap-2 rounded-full px-2 py-2 border-2 bg-black text-white font-bold text-[10px] lg:text-lg">
+              {" "}
+              <img src={figma} className="lg:h-10 lg:w-10 w-4 h-4"></img> Figma
+            </div>
+            <div className="flex  items-center gap-2 rounded-full px-2 py-2 border-2 bg-black text-white font-bold text-[10px] lg:text-lg">
+             {" "}
+              <img src={material} className="lg:h-10 lg:w-10 w-4 h-4"></img> Material
+            </div>
+          </div>
           <img
             src={Profile_img}
-            className="w-60 sm:w-80 lg:w-[80%] object-cover rounded-xl "
+            className="w-60 xs:w-[40%] lg:w-[60%] object-cover rounded-xl"
             alt="Profile"
           />
+          <div className="flex flex-col gap-2">
+            <div className="flex  items-center  rounded-full px-2 py-2 border-2 bg-black text-white font-bold text-[10px] lg:text-lg">
+            {" "}
+              <img src={bootstrap} className="lg:h-10 lg:w-10 w-4 h-4 "></img>Bootstrap
+            </div>
+            <div className="flex  items-center gap-2 rounded-full px-2 py-2 border-2 bg-black text-white font-bold text-[10px] lg:text-lg">
+              {" "}
+              <img src={node} className="lg:h-10 lg:w-10 w-4 h-4"></img> Node
+            </div>
+            <div className="flex  items-center gap-2 rounded-full px-2 py-2 border-2 bg-black text-white font-bold text-[10px] lg:text-lg">              {" "}
+              <img src={mongodb} className="lg:h-10 lg:w-10 w-4 h-4"></img> Mongo
+            </div>
+            <div className="flex  items-center gap-2 rounded-full px-2 py-2 border-2 bg-black text-white font-bold text-[10px] lg:text-lg">
+              {" "}
+              <img src={python} className="lg:h-10 lg:w-10 w-4 h-4"></img> Python
+            </div>
+            <div className="flex  items-center gap-2 rounded-full px-2 py-2 border-2 bg-black text-white font-bold text-[10px] lg:text-lg">
+             {" "}
+              <img src={typescript} className="lg:h-10 lg:w-10 w-4 h-4"></img> Python
+            </div>
+            <div className="flex  items-center gap-2 rounded-full px-2 py-2 border-2 bg-black text-white font-bold text-[10px] lg:text-lg">
+              {" "}
+              <img
+                src={express}
+                className="lg:h-10 lg:w-10 w-4 h-4 bg-white rounded-full"
+              ></img>{" "}
+              Express
+            </div>
+          </div>
         </div>
       </div>
     </div>

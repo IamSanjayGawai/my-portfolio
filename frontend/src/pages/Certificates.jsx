@@ -42,7 +42,7 @@ const Certificates = () => {
     <section className="bg-gray-100 ">
       <div className="py-12 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="mx-auto max-w-screen-sm text-center mb-10 lg:mb-16">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">
+          <h2 className="mb-4 lg:text-5xl font-extrabold text-gray-900 text-4xl ">
             My Certificates
           </h2>
           <p className="font-medium text-gray-700  sm:text-lg">
