@@ -36,7 +36,7 @@ const  project = await Project.find();
 
 res.status(200).json(project);
     }
-    catch(errror){
+    catch(error){
         res.status(500).json({ message: "Failed to fecth project.", error: error.message });
     }
 }
