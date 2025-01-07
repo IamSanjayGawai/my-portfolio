@@ -2,17 +2,17 @@ import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaFacebook } from "react-
 
 const Follow = () => {
   return (
-    <section className="bg-gray-50 py-8 antialiased md:py-16">
-      <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
+    <section className="bg-gray-50 py-8  md:py-16">
+      <div className=" px-4 2xl:px-0">
         <div className="mb-4 flex items-center justify-between gap-4 md:mb-8">
           <h2 className="lg:text-5xl font-extrabold text-gray-900 text-4xl text-center w-full">
             Follow Me
           </h2>
         </div>
 
-        <div className="flex flex-row ">
+        <div className="flex flex-row w-full ">
           {/* Social Media Links */}
-          <div className="flex justify-center items-center w-full gap-10">
+          <div className="flex justify-center items-center w-full lg:gap-10 gap-4">
             <div className="flex flex-col items-center space-y-2 hover:scale-105 transition-transform transform duration-300">
               <div className="bg-gray-900 rounded-full p-3 shadow-lg">
                 <a href="https://github.com/IamSanjayGawai/" target="_blank" rel="noopener noreferrer">

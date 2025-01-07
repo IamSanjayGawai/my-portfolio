@@ -44,7 +44,7 @@ console.log("failed")
         <EmailSent />
       }
       <section className="bg-white dark:bg-gray-900 mb-10 w-full flex justify-center items-center">
-        <div className="py-8 lg:py-16 px-[50px] lg:px-[100px]  bg-black w-[90%] lg:w-[80%] rounded-[50px]">
+        <div className="py-8 lg:py-16 px-[50px] lg:px-[100px]  bg-black w-[100%] lg:w-[80%] rounded-[50px]">
           
           <h2 className="mb-4 text-2xl lg:text-5xl tracking-tight font-extrabold text-center text-white dark:text-white">
             Contact Me
