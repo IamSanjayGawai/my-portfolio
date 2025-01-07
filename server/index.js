@@ -12,7 +12,7 @@ const app = express();
 dotenv.config(); // Load environment variables from .env file
 
 const corsOptions = {
-  origin: ['http://localhost:5173', 'https://iamsanjaygawai.vercel.app/'], // Ensure the frontend URL is correct
+  origin: ['http://localhost:5173', 'https://iamsanjaygawai.vercel.app'], // Ensure the frontend URL is correct
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow appropriate methods for your API
   allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers if necessary
   credentials: true, // Allow credentials (cookies, headers)
