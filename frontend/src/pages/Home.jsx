@@ -2,11 +2,13 @@ import About from "./About";
 import Blog from "./Blog";
 import Certificates from "./Certificates";
 import Contact from "./Contact";
+import Follow from "./Follow";
 import MainSection from "./Hero";
 import Projects from "./Project";
 import Services from "./Services";
 import Skills from "./Skills";
 import WorkWith from "./WorkWith";
+
 
 const Home = () => {
   return (
@@ -25,17 +27,21 @@ const Home = () => {
       <div id="services">
         <Services />
       </div>
+      <div id="skills">
+        <Skills />
+      </div>
       <div id="projects">
         <Projects />
       </div>
       <div id="certificates">
         <Certificates />
       </div>
-      {/* <div id="skills">
-        <Skills />
-      </div> */}
-      <div id="blog">
+  
+      {/* <div id="blog">
         <Blog />
+      </div> */}
+      <div id="contact">
+      <Follow/>
       </div>
       <div id="contact">
         <Contact />

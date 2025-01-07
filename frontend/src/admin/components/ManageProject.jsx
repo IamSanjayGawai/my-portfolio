@@ -2,10 +2,13 @@ import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { selectProjects } from "../../redux/slices/slices";
 import { useEffect } from "react";
 import { getAllProjectsThunk, deleteProjectsThunk } from "../../redux/thunks/projectThunk";
+import { useNavigate } from "react-router-dom";
+import UpdateProject from "./UpdateProject";
 
 const ManageProject = () => {
   const projects = useAppSelector(selectProjects);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate()
 
   useEffect(() => {
     console.log("Dispatching getAllProjectsThunk...");
@@ -49,7 +52,9 @@ const ManageProject = () => {
                     </span>
                   </td>
                   <td className="px-4 py-2">
-                    <button className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 mr-2">
+                    <button
+                      onClick={() => navigate(`/update-project/${project._id}`)}
+                    className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 mr-2">
                       Edit
                     </button>
                     <button

@@ -1,90 +1,109 @@
 
-
+import career from "../assets/logos/career.jpg"
+import vibencode from "../assets/logos/vibencode.webp"
 const Services = () => {
-    return (
-      <>
-        <section className="bg-gray-50 py-16">
-          <div className="container mx-auto px-6 lg:px-20">
-            <div className="text-center mb-12">
-              <h2 className="lg:text-5xl font-extrabold text-white text-4xl">
-                Our <span className="text-green-400">Services</span>
-              </h2>
-              <p className="mt-4 text-gray-600 text-lg">
-                Discover the wide range of services we offer to help you achieve your goals. From development to design, we've got you covered.
-              </p>
-            </div>
-            <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-              {/* Service 1 */}
-              <div className="bg-black rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                <div className="flex justify-center items-center mb-4 w-14 h-14 rounded-full bg-blue-100">
-                  <svg
-                    className="w-8 h-8 text-blue-600"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Web Development</h3>
-                <p className="text-white">
-                  Build scalable, responsive, and high-performance websites tailored to meet your business needs with cutting-edge technologies.
-                </p>
-              </div>
-  
-              {/* Service 2 */}
-              <div className="bg-black rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                <div className="flex justify-center items-center mb-4 w-14 h-14 rounded-full bg-blue-100">
-                  <svg
-                    className="w-8 h-8 text-blue-600"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">App Development</h3>
-                <p className="text-white">
-                  Create powerful mobile applications with intuitive UI/UX, ensuring exceptional performance and user satisfaction.
-                </p>
-              </div>
-  
-              {/* Service 3 */}
-              <div className="bg-black rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                <div className="flex justify-center items-center mb-4 w-14 h-14 rounded-full bg-blue-100">
-                  <svg
-                    className="w-8 h-8 text-blue-600"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">UI/UX Design</h3>
-                <p className="text-white">
-                  Design user interfaces that captivate and create experiences that inspire, aligning creativity with user satisfaction.
-                </p>
-              </div>
-            </div>
+  return (
+    <>
+      <section className="bg-gray-50  flex justify-center">
+        <div className=" w-full lg:px-20 px-6 ">
+          <div className="text-center mb-12">
+            <h2 className="lg:text-5xl font-extrabold text-black text-4xl">
+              My <span className="text-green-400">Experience</span>
+            </h2>
+            <p className="mt-4 text-gray-600 text-lg ">
+              Discover the wide range of services we offer to help you achieve
+              your goals. From development to design, we've got you covered.
+            </p>
           </div>
-        </section>
-      </>
-    );
-  };
-  
-  export default Services;
-  
+          <div className=" grid grid-12 gap-5">
+            {/* Service 1 */}
+            <div className="bg-black rounded-2xl shadow-md px-4 hover:shadow-lg transition-shadow flex flex-col py-10">
+              {/* logo */}
+              <div className="flex justify-between flex-col lg:flex-row gap-2 mb-8">
+                <div className="border flex lg:w-2/4 gap-3 items-center  rounded-full bg-green-400 py-2">
+                  <div className="flex justify-center items-center w-14 h-14 rounded-full bg-blue-100 border ">
+                <img  className="rounded-full" src={career} />
+                  </div>
+                  <div>
+                    <p className="text-black  text-lg flex flex-col lg:flex-row font-extrabold">
+                    株式会社キャリアサバイバル |
+                    <span className="ml-2"> Career Survival</span>
+                    
+                    </p>
+                    <p className="text-black">Remote</p>
+                  </div>
+                </div>
+
+                <div className="border flex xs:w-[200px] lg:w-1/4 gap-3 items-center  rounded-full bg-white ">
+                  <span className="text-black font-bold lg:text-xm flex justify-around w-full px-3">
+                    <span>Jan 2024</span>-<span>Nov 2024</span>
+                  </span>
+                </div>
+              </div>
+
+              <h3 className="lg:text-3xl font-bold text-white mb-8">
+                Associate Software Engineer - Frontend Developer
+              </h3>
+              <ul class=" space-y-1 text-white list-disc list-inside dark:text-gray-400 flex flex-col gap-3">
+                <li>Designed and developed over 3 complete React full theme templates, showcasing proficiency in front-end design and development.</li>
+                <li>Led the development of the Asnaro project, a full-stack React application.</li>
+                <li>
+                Successfully deployed the application on Vercel for optimal performance and accessibility.
+                </li>
+
+                <li>Collaborated in teams of developers, UI designers, and backend developers.</li>
+                <li>Demonstrated expertise in designing and building reusable components and pages, ensuring responsiveness and adherence to design specifications.</li>
+                <li>Proficiently handled API integrations</li>
+                <li>Shared knowledge and expertise by conducting training sessions on JavaScript, Responsive Web Design, and ReactJS for trainees and junior developers, contributing to skill development within the company.</li>
+              </ul>
+            </div>
+{/* service end */}
+            {/* Service 1 */}
+            <div className="bg-black rounded-2xl shadow-md px-4 hover:shadow-lg transition-shadow flex flex-col py-10">
+              {/* logo */}
+              <div className="flex justify-between flex-col lg:flex-row gap-2 mb-8">
+                <div className="border flex lg:w-2/4 gap-3 items-center  rounded-full bg-green-400 py-2">
+                  <div className="flex justify-center items-center w-14 h-14 rounded-full bg-blue-100 border ">
+                <img  className="rounded-full" src={vibencode} />
+                  </div>
+                  <div>
+                    <p className="text-black  text-lg flex flex-col lg:flex-row font-extrabold">
+                   VibenCode Pvt. Ltd.
+                    
+                    </p>
+                    <p className="text-black">Remote</p>
+                  </div>
+                </div>
+
+                <div className="border flex xs:w-[200px] lg:w-1/4 gap-3 items-center  rounded-full bg-white ">
+                  <span className="text-black font-bold lg:text-xm flex justify-around w-full px-3">
+                    <span>Jun 2023</span>-<span>Dec 2023</span>
+                  </span>
+                </div>
+              </div>
+
+              <h3 className="lg:text-3xl font-bold text-white mb-8">
+                Frontend Developer Intern
+              </h3>
+              <ul class=" space-y-1 text-white list-disc list-inside dark:text-gray-400 flex flex-col gap-3">
+                <li>Designed numerous responsive themes using ReactJS, ensuring user-friendly and visually appealing web interfaces.</li>
+                <li>Successfully integrated REST APIs, enhancing website functionality and user experience.</li>
+                <li>
+                Successfully deployed the application on Vercel for optimal performance and accessibility.
+                </li>
+                <li>Created custom stepper functionality and design</li>
+              </ul>
+            </div>
+{/* service end */}
+            {/* Service 1 */}
+        
+{/* service end */}
+
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Services;

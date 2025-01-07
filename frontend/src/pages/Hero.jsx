@@ -71,20 +71,22 @@ const MainSection = () => {
               download="SanjayGawai_Resume.pdf"
               type="application/pdf"
             >
+              
               <button
                 type="button"
-                className="text-black border-2 hover:border-white xs:text-sm lg:text-2xl   border-black bg-white hover:text-white hover:bg-green-600 focus:ring-4 focus:outline focus:ring-green-300 font-medium rounded-full  px-4 py-2 inline-flex items-center dark:focus:ring-green-800"
+                className="text-black border-2 hover:border-white xs:text-sm lg:text-2xl   border-black bg-white hover:text-white hover:bg-green-600 focus:ring-4 focus:outline  font-medium rounded-full  px-4 py-2 inline-flex items-center "
               >
+                 <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
                 Download CV
            
               </button>
             </a>
             <a href="#contact">
-              <button
-                type="button"
-                className="px-5 py-2.5  xs:text-sm text-2xl font-medium text-center inline-flex items-center text-white bg-green-500 rounded-full hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300"
-              >
+            <button class="relative inline-flex  xs:text-sm lg:text-2xl items-center justify-center p-0.5  me-2 overflow-hidden text-sm font-medium text-gray-900  group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-lime-800 rounded-full">
+<span class="relative px-4 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-full group-hover:bg-opacity-0">
+
                 Hire Me
+                </span>
               </button>
             </a>
           </div>

@@ -60,21 +60,24 @@ const Certificates = () => {
                 : visibleCertificates.map((cert, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg border dark:border-gray-700 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-[30px] shadow-lg border dark:border-gray-700 hover:shadow-xl  hover:scale-105 transition-transform transform duration-300 "
             >
-              <div className="p-5 flex flex-col items-center">
+              <div className="p-5 flex flex-col items-center ">
+                <div className="flex justify-start w-full bg-green-400 rounded-full items-center mb-8 gap-8">
                 <img
                   src={cert.image}
                   alt={cert.name}
-                  className="w-16 h-16 mb-4 rounded-full border"
+                  className="w-16 h-16  rounded-full border border-l-green-400  bg-white"
                 />
-                <h3 className="text-lg font-semibold text-gray-900  text-center">
+                <span className="font-bold text-white text-2xl">Coding Ninjas</span>
+                </div>
+                <h3 className="lg:text-2xl font-semibold text-black  text-center">
                   {cert.name}
                 </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400 text-center mt-2">
+                <p className="text-sm text-black dark:text-gray-400 text-center mt-2">
                   {cert.issuer}
                 </p>
-                <p className="mt-3 mb-4 text-sm text-gray-700 text-center line-clamp-4">
+                <p className="mt-3 mb-4 text-sm text-black text-center line-clamp-4">
                   {cert.description}
                 </p>
                 <a

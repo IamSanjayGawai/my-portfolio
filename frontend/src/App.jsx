@@ -5,6 +5,7 @@ import Dashboard from "./admin/pages/Dashboard";
 import Login from "./admin/pages/Login";
 import Navbar from "./pages/Navbar";
 import Footer from "./pages/Footer";
+import UpdateProject from "./admin/components/UpdateProject";
 
 const AppContent = () => {
   const location = useLocation();
@@ -18,6 +19,7 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="blog-detail/:id" element={<BlogDetails />} />
+        <Route path="update-project/:id" element={<UpdateProject />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Dashboard />} />
       </Routes>

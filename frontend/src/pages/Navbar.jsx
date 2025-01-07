@@ -95,7 +95,7 @@ const Navbar= () => {
                                 href="#services"
                                 className="block py-2 pl-3 pr-4 text-white hover:text-blue-700 lg:p-0 dark:text-white dark:hover:text-blue-500"
                             >
-                                Services
+                                Experinece
                             </a>
                         </li>
                         <li>
