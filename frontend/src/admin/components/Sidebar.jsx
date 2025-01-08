@@ -5,6 +5,7 @@ import { useState } from "react"
 import AddSkill from "./AddSkill"
 import Top from "../pages/Top"
 import ManageProject from "./ManageProject"
+import UpdateProject from "./UpdateProject"
 
 const Sidebar = () => {
 
@@ -86,6 +87,8 @@ const Sidebar = () => {
    {selected === "AddBlog" && <AddBlog />}
    {selected === "AddSkill" && <AddSkill />}
    {selected === "ManageProject" && <ManageProject />}
+   {selected === "" && <UpdateProject/>}
+   
  
 </div>
 

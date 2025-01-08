@@ -53,7 +53,7 @@ const ManageProject = () => {
                   </td>
                   <td className="px-4 py-2">
                     <button
-                      onClick={() => navigate(`/update-project/${project._id}`)}
+                      onClick={() => navigate(`/admin/update-project/${project._id}`)}
                     className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 mr-2">
                       Edit
                     </button>

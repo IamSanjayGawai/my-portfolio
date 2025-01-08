@@ -19,9 +19,10 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="blog-detail/:id" element={<BlogDetails />} />
-        <Route path="update-project/:id" element={<UpdateProject />} />
+
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Dashboard />} />
+        <Route path="/admin/update-project/:id" element={<UpdateProject />} />
       </Routes>
       {!isAdminRoute && <Footer />} {/* Show Footer only for non-admin routes */}
     </>
