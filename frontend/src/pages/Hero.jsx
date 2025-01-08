@@ -149,7 +149,7 @@ const MainSection = () => {
             </div>
             <div className="flex  items-center gap-2 rounded-full px-2 py-2 border-2 bg-black text-white font-bold text-[10px] lg:text-lg">
              {" "}
-              <img src={typescript} className="lg:h-10 lg:w-10 w-4 h-4"></img> Python
+              <img src={typescript} className="lg:h-10 lg:w-10 w-4 h-4"></img> TypeScript
             </div>
             <div className="flex  items-center gap-2 rounded-full px-2 py-2 border-2 bg-black text-white font-bold text-[10px] lg:text-lg">
               {" "}
