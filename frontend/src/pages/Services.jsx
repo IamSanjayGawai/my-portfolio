@@ -25,7 +25,7 @@ const Services = () => {
                 <img  className="rounded-full" src={career} />
                   </div>
                   <div>
-                    <p className="text-black  text-lg flex flex-col lg:flex-row font-extrabold">
+                    <p className="text-black text-sm lg:text-lg flex flex-col lg:flex-row font-extrabold">
                     株式会社キャリアサバイバル |
                     <span className="ml-2"> Career Survival</span>
                     
@@ -44,7 +44,7 @@ const Services = () => {
               <h3 className="lg:text-3xl font-bold text-white mb-8">
                 Associate Software Engineer - Frontend Developer
               </h3>
-              <ul class=" space-y-1 text-white list-disc list-inside dark:text-gray-400 flex flex-col gap-3">
+              <ul class="space-y-3 text-white list-disc pl-5 break-words text-sm md:text-base">
                 <li>Designed and developed over 3 complete React full theme templates, showcasing proficiency in front-end design and development.</li>
                 <li>Led the development of the Asnaro project, a full-stack React application.</li>
                 <li>
@@ -85,7 +85,7 @@ const Services = () => {
               <h3 className="lg:text-3xl font-bold text-white mb-8">
                 Frontend Developer Intern
               </h3>
-              <ul class=" space-y-1 text-white list-disc list-inside dark:text-gray-400 flex flex-col gap-3">
+              <ul class=" space-y-3 text-white list-disc pl-5 break-words text-sm md:text-base">
                 <li>Designed numerous responsive themes using ReactJS, ensuring user-friendly and visually appealing web interfaces.</li>
                 <li>Successfully integrated REST APIs, enhancing website functionality and user experience.</li>
                 <li>
