@@ -4,6 +4,7 @@ import { selectProjects } from '../redux/slices/slices';
 import { getAllProjectsThunk } from '../redux/thunks/projectThunk';
 import MyRole from '../components/MyRole';
 
+
 const Projects = () => {
   const projects = useAppSelector(selectProjects);
   const dispatch = useAppDispatch();

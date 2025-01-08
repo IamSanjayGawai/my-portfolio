@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { createProjectThunk, getAllProjectsThunk, deleteProjectsThunk } from "../thunks/projectThunk";
 import { addCertificateThunk, getCertificateThunk } from "../thunks/certificateThunk";
 import { addBlogThunk, getBlogThunk, getBlogByIdThunk } from "../thunks/blogThunk";
+import { makecontactThunk } from "../thunks/contactThunk";
 
 const initialState = {
   projects: [],
@@ -10,6 +11,7 @@ const initialState = {
   singleBlog: {},
   loading: false,
   error: null,
+  contact:[]
 };
 
 const projectSlice = createSlice({
@@ -120,6 +122,19 @@ const projectSlice = createSlice({
     builder.addCase(deleteProjectsThunk.rejected, (state, action) => {
       state.loading = false;
       state.error = action.payload || action.error?.message || "Failed to delete project";
+    });
+
+    builder.addCase(makecontactThunk.pending, (state) => {
+      state.loading = true;
+      state.error = null;
+    });
+    builder.addCase(makecontactThunk.fulfilled, (state, action) => {
+      state.loading = false;
+      state.contact = action.payload;
+    });
+    builder.addCase(makecontactThunk.rejected, (state, action) => {
+      state.loading = false;
+      state.error = action.payload || action.error?.message || "Failed to create contact";
     });
   },
 });

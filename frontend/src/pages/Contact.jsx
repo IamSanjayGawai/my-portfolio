@@ -1,10 +1,12 @@
 import { useState } from "react";
 import axios from "axios"
 import EmailSent from "../components/EmailSent";
+import { makecontactThunk } from '../redux/thunks/contactThunk';
+import { useDispatch } from "react-redux";
 
 const Contact = () => {
 
-
+const dispatch = useDispatch()
   const [formData, setFormData] = useState({
     email: "",
     subject: "",
@@ -20,8 +22,8 @@ const [loading, setLoading] = useState(false)
     e.preventDefault();
     try {
       setLoading(true)
-      const response = await axios.post('http://localhost:5000/api/email/contact', formData);
-      console.log(response)
+      console.log("working")
+      await dispatch(makecontactThunk(formData));
       setEmailSent(true)
       setLoading(false)
 
