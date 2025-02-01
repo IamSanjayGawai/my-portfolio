@@ -15,7 +15,8 @@ const MainSection = () => {
   return (
     <div className="w-full flex items-center justify-center mt-10 relative">
       {/* Background Section */}
-      <div className="absolute inset-0 bg-[url('./assets/background.png')] bg-center bg-cover bg-no-repeat opacity-20 z-0"></div>
+      <div className="absolute inset-0 bg-[url('./assets/background.png')] bg-center bg-cover bg-no-repeat opacity-50 z-0"></div>
+
 
       {/* Main Content */}
       <div className="container w-full flex flex-col sm:flex-col md:flex-col lg:flex-col items-center justify-between relative z-10">

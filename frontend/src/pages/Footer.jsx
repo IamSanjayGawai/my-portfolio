@@ -3,7 +3,7 @@ import profile_img from '../assets/images/profile-img.png';
 const Footer = () => {
   return (
     <footer className="p-6 ">
-      <div className="container mx-auto max-w-screen-xl bg-gray-900 text-gray-300 p-6 rounded-xl">
+      <div className="  bg-gray-900 text-gray-300 p-6 rounded-xl">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
           {/* Profile Section */}

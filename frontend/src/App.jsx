@@ -6,6 +6,7 @@ import Login from "./admin/pages/Login";
 import Navbar from "./pages/Navbar";
 import Footer from "./pages/Footer";
 import UpdateProject from "./admin/components/UpdateProject";
+import ProjectDetail from "./pages/ProjectDetail";
 
 const AppContent = () => {
   const location = useLocation();
@@ -23,6 +24,7 @@ const AppContent = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Dashboard />} />
         <Route path="/admin/update-project/:id" element={<UpdateProject />} />
+        <Route path="/project-detail/:id"  element={<ProjectDetail/>}/>
       </Routes>
       {!isAdminRoute && <Footer />} {/* Show Footer only for non-admin routes */}
     </>

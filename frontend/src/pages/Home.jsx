@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import About from "./About";
 import Blog from "./Blog";
 import Certificates from "./Certificates";
@@ -11,6 +12,10 @@ import WorkWith from "./WorkWith";
 
 
 const Home = () => {
+
+  useEffect(()=> {
+    window.scrollTo(0, 0);
+  })
   return (
     <>
   
@@ -27,11 +32,12 @@ const Home = () => {
       <div id="services">
         <Services />
       </div>
-      <div id="skills">
-        <Skills />
-      </div>
+   
       <div id="projects">
         <Projects />
+      </div>
+      <div id="skills">
+        <Skills />
       </div>
       <div id="certificates">
         <Certificates />

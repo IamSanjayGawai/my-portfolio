@@ -9,7 +9,7 @@ const WorkWith = () => {
   return (
     <>
       <div>
-        <section className="bg-white  ">
+        <section className="bg-white ">
           <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
             <h2 className="lg:text-5xl font-extrabold text-gray-900 text-4xl mb-8 text-center">
               I have <span className="text-green-400">worked with</span>
