@@ -368,8 +368,8 @@ const ProjectDetail = () => {
           <h1 className="text-4xl font-extrabold text-gray-900 mb-4">{project.name}</h1>
           <p className="text-xl text-gray-600 mb-6">{project.description}</p>
           <div className="flex justify-center flex-col items-center text-gray-500 mb-6">
-            <i className="fas fa-calendar-alt mr-2"></i>
-            <span>Duration: 6 months (January 2023 - June 2023)</span>
+            {/* <i className="fas fa-calendar-alt mr-2"></i> */}
+            {/* <span>Duration: 6 months (January 2023 - June 2023)</span> */}
             <h2 className="text-xl font-bold text-gray-900 mb-2 mt-6 ">Technologies Used</h2>
             <div className="flex justify-center items-center flex-col lg:flex-row w-[80%] gap-2">
   {project.tech_stack.map((tech, index) => (
