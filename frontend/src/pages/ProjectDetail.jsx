@@ -392,8 +392,11 @@ const ProjectDetail = () => {
               <p>{project.more_details}</p>
               <h3 className="text-xl font-semibold mt-6 mb-4">Key Objectives:</h3>
               <ul>
-                {project.problem_faced.map((item, index) => (
-                  <li key={index}>{item.problem}</li>
+                {project.features.map((item, index) => (
+                  <li key={index}>
+                    <span className="font-bold">{item.name}</span>:&nbsp; &nbsp;
+                  <span>{item.desc}</span>
+                  </li>
                 ))}
               </ul>
             </div>
